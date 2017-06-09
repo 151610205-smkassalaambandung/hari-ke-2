@@ -45,8 +45,10 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/test', 'Mycontroller@percobaan');
 Route::get('/test2', 'Mycontroller@percobaan2');
-Route::get('/latihan.saya', 'Mycontroller@percobaan3');
+Route::get('/saya', 'Mycontroller@percobaan3');
 Route::get('/qwert', 'Mycontroller@qwert');
 Route::get('/seleksi','Mycontroller@percobaan4');
 Route::get('/buah','Mycontroller@percobaan5');
 Route::get('/tugas','Mycontroller@tugas');
+Route::get('/{id}','Mycontroller@parameter');
+Route::get('loop/{data1}/{data2}','Mycontroller@param');
