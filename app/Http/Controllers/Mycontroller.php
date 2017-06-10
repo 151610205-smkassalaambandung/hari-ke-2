@@ -66,8 +66,29 @@ class Mycontroller extends Controller
     return view('latihan.tugas2', compact('asia'));
     }
 
-    public function param()
+    public function parameter2($data,$data2 = null)
     {
+        $array = array('binatangx'=>['kucing'=>['persia','anggora'],
+                                    'hamster'=>['hamtaro','hamtari'],
+                                    'kelinci'=>['Anggora','persia']],
+            
+                        'buahx'=>['mangga'=>['harumanis','marijan'],
+                                'alpukat'=>['hijau','hitam'],
+                                'apel'=>['fuji','hejo']],
 
+                        'komputerx'=>['asus'=>['4563','456'],
+                                    'dell'=>['alienware','inspiron'],
+                                    'acer'=>['6930','7780']]
+            );
+
+        if ($data){
+            $query = (array_keys($array[$data]));
+        }
+        if ($data2){
+            $query = ($array[$data][$data2]);
+        }
+        return view('latihan.tugas3',compact('query','data','data2'));
     }
+
+    
  }

@@ -50,5 +50,7 @@ Route::get('/qwert', 'Mycontroller@qwert');
 Route::get('/seleksi','Mycontroller@percobaan4');
 Route::get('/buah','Mycontroller@percobaan5');
 Route::get('/tugas','Mycontroller@tugas');
-Route::get('/{id}','Mycontroller@parameter');
-Route::get('loop/{data1}/{data2}','Mycontroller@param');
+// Route::get('/{id}','Mycontroller@parameter');
+Route::get('loop/{data1?}/{data2?}','Mycontroller@parameter2');
+
+Route::get('/coba/{siswa}','SiswaController@show');
